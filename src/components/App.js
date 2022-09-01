@@ -1,8 +1,21 @@
 import React from "react";
+import {
+    Routes,
+    Route
+} from 'react-router-dom'
+import {
+    Navbar,
+    Homepage
+} from './Index'
 
 const App = () => {
     return (
-        <div>Hello World</div>
+        <div>
+            <Navbar/>
+                <Routes>
+                    <Route path='/' element={<Homepage/>} />
+                </Routes>
+        </div>
     )
 }
 
