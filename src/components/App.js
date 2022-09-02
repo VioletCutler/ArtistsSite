@@ -5,7 +5,9 @@ import {
 } from 'react-router-dom'
 import {
     Navbar,
-    Homepage
+    Homepage,
+    Beavertail, 
+    Videos
 } from './Index'
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
             <Navbar/>
                 <Routes>
                     <Route path='/' element={<Homepage/>} />
+                    <Route path='/videos' element={<Videos/>} />
+                    <Route path='/videos/beavertail' element={<Beavertail />} />
                 </Routes>
         </div>
     )
