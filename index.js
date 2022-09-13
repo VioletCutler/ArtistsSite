@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = 8080;
 
 const cors = require("cors");
 app.use(cors());
@@ -15,22 +15,25 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res, next) => {
-    console.log('logger')
-    next()
-})
-
 const path = require("path");
 app.use(express.static(path.join(__dirname, "build")));
 
-app.use('/api', require('./api'))
+app.use("/", (req, res, next) => {
+  console.log('Body Logger Begin-->')
+  console.log(req.body)
+  console.log('Body Logger End-->')
+  next()
+});
+
+app.use("/api", require("./api"));
 
 app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 app.listen(
-  (PORT,
-  async () => {
-    console.log(`Server is listening on PORT ${PORT}`);
-  })
+  PORT,
+  () => {
+    console.log(`Is this working Server is listening on PORT ${PORT}`);
+  }
 );
