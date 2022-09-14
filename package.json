@@ -9,7 +9,8 @@
     "client:dev": "react-scripts start",
     "client:build": "react-scripts build",
     "server:dev": "nodemon index.js",
-    "start:dev": "concurrently \"npm run client:build\" \"npm run client:dev\" \"npm run server:dev\""
+    "start:dev": "concurrently \"npm run client:build\" \"npm run client:dev\" \"npm run server:dev\"",
+    "db:build": "node ./db/init_db"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "googleapis": "^107.0.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19",
+    "pg": "^8.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
