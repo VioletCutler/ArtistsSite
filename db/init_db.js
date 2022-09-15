@@ -1,16 +1,18 @@
 const { 
     client,
-    // declare your model imports here
-    // for example, User
 } = require('./')
 
 const {
-    createPostsTable
+    createPostsTable,
+    createInitialPosts,
+
+    createVideosTable
 } = require('./models/index')
 
 async function dropTables() {
     await client.query(`
-        DROP TABLE IF EXISTS posts
+        DROP TABLE IF EXISTS videos;
+        DROP TABLE IF EXISTS posts;
     `)
 }
 
@@ -23,6 +25,7 @@ async function buildTables() {
         console.log('Finished dropping tables')
         console.log('Starting to build tables')
         await createPostsTable();
+        await createVideosTable();
         console.log('Finished building tables')
     } catch(error) {
         console.log("Error building tables")
@@ -33,7 +36,7 @@ async function buildTables() {
 async function populateInitialData() {
     try {
         console.log('Starting to populate initial data')
-
+        await createInitialPosts()
         console.log('Finished populating initial data')
 
     } catch(error) {

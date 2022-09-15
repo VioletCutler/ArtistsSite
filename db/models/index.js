@@ -1,3 +1,4 @@
 module.exports = {
-    ...require('./posts')
+    ...require('./posts'),
+    ...require('./videos')
 }

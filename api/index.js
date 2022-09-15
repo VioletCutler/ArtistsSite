@@ -1,4 +1,5 @@
 const apiRouter = require('express').Router();
+const { postsRouter } = require('./posts')
 
 apiRouter.get('/', (req, res, next) => {
   res.send({
@@ -12,6 +13,7 @@ apiRouter.get('/health', (req, res, next) => {
   });
 });
 
+apiRouter.use('/posts', postsRouter)
 // place your routers here
 
 module.exports = apiRouter;
