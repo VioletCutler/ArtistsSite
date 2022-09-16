@@ -21,7 +21,24 @@ async function createPostsTable() {
   }
 }
 
-async function createPost({ title, content, active }) {
+async function getAllPosts() {
+  console.log('Beginning to get all posts')
+  try {
+    const { rows: posts} = await client.query(`
+      SELECT *
+      FROM posts;
+    `)
+    console.log(posts)
+    return posts
+  } catch(error) {
+    console.log('Error getting all posts')
+    throw error
+  }
+}
+
+async function createPost({ title, content, active = true }) {
+  console.log("Beginning to create post...");
+  console.log("title->", title, "content->", content, "active->", active);
   try {
     const post = await client.query(
       `
@@ -31,6 +48,7 @@ async function createPost({ title, content, active }) {
         `,
       [title, content, active]
     );
+    console.log("...Finished creating new post");
     return post;
   } catch (error) {
     console.log("Error creating post");
@@ -39,36 +57,38 @@ async function createPost({ title, content, active }) {
 }
 
 async function createInitialPosts() {
-    console.log('Starting to create initial posts...')
-    try {
-        const postsToCreate = [
-            {
-                title: 'My First Post',
-                content: 'I am so excited to start this new blog! Keep checking in to see what I am up to',
-                active: true
-            },
-            {
-                title: 'My Second Post',
-                content: 'Look at all this cool stuff I am working on',
-                active: true 
-            },
-            {
-                title: 'My Third Post',
-                content: 'Something something something',
-                active: false
-            }
-        ]
-        const posts = await Promise.all(
-            postsToCreate.map((post) => createPost(post))
-        )
-    } catch(error) {
-        console.log('Error creating inital posts')
-        throw error
-    }
+  console.log("Starting to create initial posts...");
+  try {
+    const postsToCreate = [
+      {
+        title: "My First Post",
+        content:
+          "I am so excited to start this new blog! Keep checking in to see what I am up to",
+        active: true,
+      },
+      {
+        title: "My Second Post",
+        content: "Look at all this cool stuff I am working on",
+        active: true,
+      },
+      {
+        title: "My Third Post",
+        content: "Something something something",
+        active: false,
+      },
+    ];
+    const posts = await Promise.all(
+      postsToCreate.map((post) => createPost(post))
+    );
+  } catch (error) {
+    console.log("Error creating inital posts");
+    throw error;
+  }
 }
 
 module.exports = {
   createPostsTable,
   createPost,
-  createInitialPosts
+  createInitialPosts,
+  getAllPosts
 };

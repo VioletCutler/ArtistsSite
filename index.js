@@ -5,15 +5,10 @@ const PORT = 8080;
 const cors = require("cors");
 app.use(cors());
 
-const morgan = require("morgan");
-app.use(morgan("dev"));
-
 app.use(express.json());
 
-app.use((req, res, next) => {
-  console.log(`Req method: reqURL ${req.method}:${req.url}`);
-  next();
-});
+const morgan = require("morgan");
+app.use(morgan('dev'));
 
 const path = require("path");
 app.use(express.static(path.join(__dirname, "build")));
@@ -34,6 +29,6 @@ app.use((req, res, next) => {
 app.listen(
   PORT,
   () => {
-    console.log(`Is this working Server is listening on PORT ${PORT}`);
+    console.log(`Server is listening on PORT ${PORT}`);
   }
 );

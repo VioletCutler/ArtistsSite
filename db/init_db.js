@@ -5,8 +5,7 @@ const {
 const {
     createPostsTable,
     createInitialPosts,
-
-    createVideosTable
+    getAllPosts,
 } = require('./models/index')
 
 async function dropTables() {
@@ -25,7 +24,6 @@ async function buildTables() {
         console.log('Finished dropping tables')
         console.log('Starting to build tables')
         await createPostsTable();
-        await createVideosTable();
         console.log('Finished building tables')
     } catch(error) {
         console.log("Error building tables")
@@ -48,7 +46,7 @@ async function populateInitialData() {
 async function testDB() {
     try {
         console.log('Starting to test the database')
-
+        console.log(await getAllPosts())
         console.log('Finished testing the database')
 
     } catch(error) {
