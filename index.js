@@ -26,6 +26,10 @@ app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
+app.get('*', (req, res) => {
+  res.status(404).send({error: `404 - Not Found`, message: 'No route found for the requested URL'});
+})
+
 app.listen(
   PORT,
   () => {
