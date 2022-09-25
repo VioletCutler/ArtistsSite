@@ -32,12 +32,11 @@ async function createPostsTable() {
 async function getAllPosts() {
   console.log('Beginning to get all posts')
   try {
-    client.connect()
     const { rows: posts} = await client.query(`
       SELECT *
       FROM posts;
     `)
-    client.end()
+
     console.log(posts)
     return posts
   } catch(error) {
@@ -50,7 +49,6 @@ async function createPost({ title, content, active = true }) {
   console.log("Beginning to create post...");
   console.log("title->", title, "content->", content, "active->", active);
   try {
-    client.connect()
     const post = await client.query(
       `
         INSERT INTO posts(title, content, active)
@@ -59,7 +57,6 @@ async function createPost({ title, content, active = true }) {
         `,
       [title, content, active]
     );
-    client.end()
     console.log("...Finished creating new post");
     return post;
   } catch (error) {

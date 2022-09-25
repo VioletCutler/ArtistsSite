@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const PORT = 8080;
+const { client } = require('./db')
+const PORT = process.env.PORT || 4000;
 
 const cors = require("cors");
 app.use(cors());
@@ -30,9 +31,14 @@ app.get('*', (req, res) => {
   res.status(404).send({error: `404 - Not Found`, message: 'No route found for the requested URL'});
 })
 
-app.listen(
-  PORT,
-  () => {
-    console.log(`Server is listening on PORT ${PORT}`);
+const handle = app.listen(PORT, async() => {
+  console.log(`Server is listening on PORT ${PORT}`)
+
+  try {
+    await client.connect();
+    console.log('Database is open and ready to go!')
+  } catch(error) {
+    console.error('Database is closed for repairs\n', error)
   }
-);
+})
+

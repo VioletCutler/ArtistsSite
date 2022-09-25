@@ -8,13 +8,6 @@ const {
     getAllPosts,
 } = require('./models/index')
 
-async function dropTables() {
-    await client.query(`
-        DROP TABLE IF EXISTS videos;
-        DROP TABLE IF EXISTS posts;
-    `)
-}
-
 async function buildTables() {
     try {
         client.connect();
@@ -29,6 +22,13 @@ async function buildTables() {
         console.log("Error building tables")
         throw error;
     }
+}
+
+async function dropTables() {
+    await client.query(`
+        DROP TABLE IF EXISTS videos;
+        DROP TABLE IF EXISTS posts;
+    `)
 }
 
 async function populateInitialData() {
@@ -46,7 +46,7 @@ async function populateInitialData() {
 async function testDB() {
     try {
         console.log('Starting to test the database')
-        console.log(await getAllPosts())
+        console.log('Here are all the posts', await getAllPosts())
         console.log('Finished testing the database')
 
     } catch(error) {

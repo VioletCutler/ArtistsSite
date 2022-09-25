@@ -1,5 +1,6 @@
 const postsRouter = require('express').Router()
 const { createPost, getAllPosts } = require('../db/models/posts')
+const { client } = require('../db')
 
 postsRouter.use((req, res, next) => {
     console.log(`You've hit the Posts Router`)

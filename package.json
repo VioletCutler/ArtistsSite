@@ -29,6 +29,7 @@
     "react-scripts": "^5.0.1",
     "react-youtube": "^9.0.3"
   },
+  "proxy": "http://localhost:4000",
   "browserslist": {
     "production": [
       ">0.2%",

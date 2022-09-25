@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import {
   Navbar,
+  Posts,
   Homepage,
   Beavertail,
   Arpana,
@@ -35,6 +36,7 @@ const App = () => {
       <div id="routes">
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path='/posts' element={<Posts/>}/>
           <Route path="/videos" element={<Videos />} />
           <Route path="/videos/beavertail" element={<Beavertail />} />
           <Route path="/videos/arpana" element={<Arpana />} />
