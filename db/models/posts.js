@@ -17,9 +17,6 @@ async function createPostsTable() {
             id SERIAL PRIMARY KEY,
             title VARCHAR(255) UNIQUE NOT NULL,
             content TEXT NOT NULL,
-            "videoURL" TEXT,
-            "videoTitle" VARCHAR(255),
-            "videoDescription" TEXT,
             active BOOLEAN DEFAULT true
         );
         `);

@@ -8,7 +8,7 @@ async function createVideosTable() {
             "title" varchar(255) NOT NULL,
             "date" date NOT NULL,
             "description" text NOT NULL,
-            "post" int
+            post_id INT REFERENCES posts(id)
           );
         `)
     } catch(error) {

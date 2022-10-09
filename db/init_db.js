@@ -6,6 +6,7 @@ const {
     createPostsTable,
     createInitialPosts,
     getAllPosts,
+    createVideosTable
 } = require('./models/index')
 
 async function buildTables() {
@@ -17,6 +18,7 @@ async function buildTables() {
         console.log('Finished dropping tables')
         console.log('Starting to build tables')
         await createPostsTable();
+        await createVideosTable()
         console.log('Finished building tables')
     } catch(error) {
         console.log("Error building tables")
