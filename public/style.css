@@ -68,6 +68,11 @@ select {
   height: 100%;
 }
 
+footer {
+  color: white;
+  position: fixed;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -91,7 +96,7 @@ nav{
 }
 
 link {
-  background-color: white;
+  color: white;
 }
 
 header {
@@ -100,4 +105,22 @@ header {
   align-items: center;
   color: white;
   background-color:black
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+}
+
+.nav-link-selected {
+  color: red;
+}
+
+.nav-link-unselected {
+  color: green;
 }

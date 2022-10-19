@@ -18,10 +18,9 @@ const Homepage = () => {
 
   return (
     <div id="homepage">
-      <header>
-        <h1>Ultraviolet</h1>
-      </header>
+     
       <main>
+        <section>
         <iframe
           width="100%"
           height="600"
@@ -31,16 +30,8 @@ const Homepage = () => {
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-        {/* <div id="video-controls">
-    <button onClick={handlePlay} type="button" id="play-pause">Play</button>
-    <input type="range" id="seek-bar" defaultValue="0"/>
-    <button type="button" id="mute">Mute</button>
-    <input onChange={handleVolume} type="range" id="volume-bar" min="0" max="1" step="0.1" defaultValue={volume}/>
-    <button type="button" id="full-screen">Full-Screen</button>
-  </div> */}
-        <h1>HTML Ipsum Presents</h1>
-
-        <p>
+<h2>HTML Ipsum Presents</h2>
+<p>
           <strong>Pellentesque habitant morbi tristique</strong> senectus et
           netus et malesuada fames ac turpis egestas. Vestibulum tortor quam,
           feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
@@ -76,6 +67,18 @@ const Homepage = () => {
           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
           <li>Aliquam tincidunt mauris eu risus.</li>
         </ul>
+        </section>
+        
+        {/* <div id="video-controls">
+    <button onClick={handlePlay} type="button" id="play-pause">Play</button>
+    <input type="range" id="seek-bar" defaultValue="0"/>
+    <button type="button" id="mute">Mute</button>
+    <input onChange={handleVolume} type="range" id="volume-bar" min="0" max="1" step="0.1" defaultValue={volume}/>
+    <button type="button" id="full-screen">Full-Screen</button>
+  </div> */}
+        
+
+        
       </main>
     </div>
   );

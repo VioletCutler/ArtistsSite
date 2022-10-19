@@ -8,6 +8,7 @@ import {
   Arpana,
   Videos,
   PhillySkyline,
+  Footer
 } from "./Index";
 import { getAPIHealth } from "../axios-services";
 
@@ -31,7 +32,7 @@ const App = () => {
 
 
   return (
-    <div>
+    <div className='wrapper'>
       <Navbar />
       <div id="routes">
         <Routes>
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/videos/philly" element={<PhillySkyline />} />
         </Routes>
       </div>
+      <Footer/>
     </div>
   );
 };
