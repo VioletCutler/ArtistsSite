@@ -26,6 +26,11 @@ const Navbar = () => {
             console.log("nav-link" + !isActive )
     return "nav-link" + (!isActive ? "-unselected" : "")}
   }to='/posts'>Posts</NavLink>
+   <NavLink className={isActive => {
+            console.log('isActive', isActive)
+            console.log("nav-link" + !isActive )
+    return "nav-link" + (!isActive ? "-unselected" : "")}
+  }to='/templates'>Templates</NavLink>
         </nav>
         </div>
         

@@ -8,7 +8,8 @@ import {
   Arpana,
   Videos,
   PhillySkyline,
-  Footer
+  Footer,
+  Templates
 } from "./Index";
 import { getAPIHealth } from "../axios-services";
 
@@ -42,6 +43,8 @@ const App = () => {
           <Route path="/videos/beavertail" element={<Beavertail />} />
           <Route path="/videos/arpana" element={<Arpana />} />
           <Route path="/videos/philly" element={<PhillySkyline />} />
+
+          <Route path="/templates" element={<Templates />} />
         </Routes>
       </div>
       <Footer/>
