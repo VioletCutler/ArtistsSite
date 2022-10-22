@@ -1,3 +1,20 @@
+:root {
+  /* old color schemes 
+  --background-color: #691B74;
+  --card-background-color: #892BE2;
+  
+  */
+
+
+
+  /* light mode */
+  --background-color: #9d3342;
+  --card-background-color: #cc5a33;
+  --navbar: #cdc63a;
+  /* dark mode */
+
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -35,7 +52,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: black;
+  background-color: var(--navbar);
 }
 
 /* A elements that don't have a class get default styles */
@@ -64,8 +81,9 @@ select {
 }
 
 #routes {
-  background-color: blueviolet;
+  background-color: var(--background-color);
   height: 100%;
+  margin-top:3em;
 }
 
 footer {
@@ -89,22 +107,14 @@ footer {
   }
 }
 
-nav{
+/* nav {
   background-color: rgb(0, 0, 0);
-  border: .1rem solid;
+  border: 0.1rem solid;
   border-color: white;
-}
+} */
 
 link {
   color: white;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color:black
 }
 
 footer {
@@ -112,28 +122,103 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: blueviolet;
+  background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
 }
 
+#navbar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--navbar);
+  text-align: center;
+  max-height: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 40em;
+}
+
+header {
+  color: black;
+  margin-left: 3em;
+}
+/* nav {
+  position: fixed;
+  left: 0;
+  top: 3em;;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+} */
+
 .nav-link-selected {
-  color: red;
+  color: rgb(0, 85, 255);
 }
 
 .nav-link-unselected {
   color: green;
 }
 
-.imageContainer {
-  display: flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.imageContainer, img, iframe, h3 {
+  min-width: 90%;
+  min-height: 90%;
 }
 
-img {
-  width: 20rem;
-  height: 20rem;
+iframe {
+  min-height: 40em;
 }
+
+
+section {
+  max-width: 90%vw;
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+}
+section > * {
+  margin: 0 2em 2em 2em;
+
+}
+
+.videoContainer {
+  padding: 2em;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-background-color);
+  border-radius: 3%;
+}
+
+article > p {
+  margin-left:2em;
+  margin-right:2em;
+  margin: 2em 0em 2em 2em;
+}
+
+.videoPostContainer > h3 {
+  align-self: flex-start;
+  font-size: 3rem;
+  padding-left: 1em;
+  color: rgb(11, 2, 114);
+}
+
+h3 {
+  border-bottom: solid thick black;
+  min-width: 100%;
+}
+

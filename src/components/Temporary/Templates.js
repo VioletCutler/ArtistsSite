@@ -12,9 +12,7 @@ Templates is the way to go:
 //template 1
 // A post about a video I made
 
-{
-  /* <iframe width="560" height="315" src="https://www.youtube.com/embed/aGbGNQXEFkw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
-}
+
 
 const Templates = () => {
   return (
