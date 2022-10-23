@@ -1,10 +1,16 @@
 :root {
-  /* color scheme */
-
-  /* light mode */
+  /* old color schemes 
   --background-color: #691B74;
   --card-background-color: #892BE2;
+  
+  */
 
+
+
+  /* light mode */
+  --background-color: #9d3342;
+  --card-background-color: #cc5a33;
+  --navbar: #cdc63a;
   /* dark mode */
 
 }
@@ -46,7 +52,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: black;
+  background-color: var(--navbar);
 }
 
 /* A elements that don't have a class get default styles */
@@ -122,13 +128,11 @@ footer {
 }
 
 #navbar{
-  color: white;
-  background-color: rgb(162, 234, 188);
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--navbar);
   text-align: center;
   max-height: 3em;
   display: flex;
@@ -145,6 +149,7 @@ nav {
 }
 
 header {
+  color: black;
   margin-left: 3em;
 }
 /* nav {
@@ -158,7 +163,7 @@ header {
 } */
 
 .nav-link-selected {
-  color: red;
+  color: rgb(0, 85, 255);
 }
 
 .nav-link-unselected {
@@ -209,7 +214,7 @@ article > p {
   align-self: flex-start;
   font-size: 3rem;
   padding-left: 1em;
-  color: rgb(255, 255, 255);
+  color: rgb(11, 2, 114);
 }
 
 h3 {

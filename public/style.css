@@ -8,9 +8,9 @@
 
 
   /* light mode */
-  --background-color: #9d3342;
-  --card-background-color: #cc5a33;
-  --navbar: #cdc63a;
+  --background-color: #000000;
+  --card-background-color: #444444;
+  --navbar: #dedede;
   /* dark mode */
 
 }
@@ -36,6 +36,10 @@ dd {
   margin: 0;
 }
 
+h1, h2, h3, h4 {
+  color: white;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
@@ -52,6 +56,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-size: 1.5rem;
   background-color: var(--navbar);
 }
 
@@ -148,10 +153,20 @@ nav {
   flex-basis: 40em;
 }
 
+nav > * {
+  box-sizing: border-box;
+  border: solid black;
+  padding: .2em;
+  border-radius: 10%;
+  background: black;
+  color: white;
+}
+
 header {
   color: black;
   margin-left: 3em;
 }
+
 /* nav {
   position: fixed;
   left: 0;
@@ -220,5 +235,9 @@ article > p {
 h3 {
   border-bottom: solid thick black;
   min-width: 100%;
+}
+
+h2 {
+  padding-top: 1em;
 }
 
