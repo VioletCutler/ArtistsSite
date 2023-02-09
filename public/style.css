@@ -5,12 +5,25 @@
   
   */
 
+  /* LIGHT MODE */
 
 
-  /* light mode */
+
+  /* DARK MODE */
   --background-color: #000000;
   --card-background-color: #444444;
   --navbar: #dedede;
+
+  /* Nav Bar */
+  --active-nav-link-background: rgb(11, 2, 114);
+  --active-nav-link-font: white;
+  --inactive-nav-link-background:black;
+  --inactive-nav-link-font: white;
+  
+
+
+  /* light mode */
+
   /* dark mode */
 
 }
@@ -91,10 +104,7 @@ select {
   margin-top:3em;
 }
 
-footer {
-  color: white;
-  position: fixed;
-}
+
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -128,8 +138,11 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
+  border-top:1px solid white;
   color: white;
   text-align: center;
+  display:grid;
+  grid-template-columns: 5fr 1fr;
 }
 
 #navbar{
@@ -177,13 +190,6 @@ header {
   text-align: center;
 } */
 
-.nav-link-selected {
-  color: rgb(0, 85, 255);
-}
-
-.nav-link-unselected {
-  color: green;
-}
 
 .imageContainer, img, iframe, h3 {
   min-width: 90%;
@@ -204,7 +210,6 @@ section {
 }
 section > * {
   margin: 0 2em 2em 2em;
-
 }
 
 .videoContainer {
@@ -239,5 +244,11 @@ h3 {
 
 h2 {
   padding-top: 1em;
+}
+
+
+nav > *[aria-current="page"] {
+  background: var(--active-nav-link-background);
+  color:var(--active-nav-link-font);
 }
 

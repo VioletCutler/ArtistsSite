@@ -24,7 +24,7 @@ const Homepage = () => {
             {" "}
             <iframe
               width="100%"
-              height="600"
+              height="300"
               loop={true}
               src="https://www.youtube.com/embed/iHUanjVprDI"
               title="YouTube video player"
@@ -33,7 +33,7 @@ const Homepage = () => {
             ></iframe>
           </article>
           <article>
-            <h3 className='header' >Header Level 2</h3>
+            <h2 className='header' >Header Level 2</h2>
             <p>
               <strong>Pellentesque habitant morbi tristique</strong> senectus et
               netus et malesuada fames ac turpis egestas. Vestibulum tortor
@@ -61,7 +61,7 @@ const Homepage = () => {
                 elit sit amet quam. Vivamus pretium ornare est.
               </p>
             </blockquote>
-            <h4>Header Level 4</h4>
+            <h2>Header Level 2</h2>
             <ul>
               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
               <li>Aliquam tincidunt mauris eu risus.</li>
