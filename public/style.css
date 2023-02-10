@@ -191,15 +191,15 @@ header {
 } */
 
 
-.imageContainer, img, iframe, h3 {
+.imageContainer, img, h3 {
   min-width: 90%;
   min-height: 90%;
 }
 
 iframe {
-  min-height: 40em;
+  width:35em;
+  height:25em;
 }
-
 
 section {
   max-width: 90%vw;
@@ -251,4 +251,3 @@ nav > *[aria-current="page"] {
   background: var(--active-nav-link-background);
   color:var(--active-nav-link-font);
 }
-

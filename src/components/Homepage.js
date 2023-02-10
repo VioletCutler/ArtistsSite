@@ -20,18 +20,15 @@ const Homepage = () => {
     <div id="homepage">
       <main>
         <section>
-          <article>
-            {" "}
+          <div class="video-container">
             <iframe
-              width="100%"
-              height="300"
-              loop={true}
-              src="https://www.youtube.com/embed/iHUanjVprDI"
+              loop='true'
+              src="https://www.youtube.com/embed/iHUanjVprDI?rel=0"
               title="YouTube video player"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </article>
+          </div>
           <article>
             <h2 className='header' >Header Level 2</h2>
             <p>

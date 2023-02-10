@@ -31,7 +31,7 @@ app.get('*', (req, res) => {
   res.status(404).send({error: `404 - Not Found`, message: 'No route found for the requested URL'});
 })
 
-const handle = app.listen(PORT, async() => {
+app.listen(PORT, async() => {
   console.log(`Server is listening on PORT ${PORT}`)
 
   try {

@@ -104,10 +104,7 @@ select {
   margin-top:3em;
 }
 
-footer {
-  color: white;
-  position: fixed;
-}
+
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -141,8 +138,11 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
+  border-top:1px solid white;
   color: white;
   text-align: center;
+  display:grid;
+  grid-template-columns: 5fr 1fr;
 }
 
 #navbar{
@@ -252,7 +252,3 @@ nav > *[aria-current="page"] {
   color:var(--active-nav-link-font);
 }
 
-#persisten-header {
-  display:grid;
-  grid-template-columns: 5fr 1fr;
-}
