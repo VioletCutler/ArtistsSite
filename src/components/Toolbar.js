@@ -6,7 +6,7 @@ const Toolbar = ({ toolbarVisibility, setToolbarVisibility }) => {
     console.log("setToolbarVisibility", toolbarVisibility);
   }
   return (
-    <div>
+    <div id='toolbar-container'>
         <button id='toolbar-button' onClick={changeToolbarDisplay}>Accessibility Options</button> 
       {toolbarVisibility ? <div id="toolbar">
         <h2 id='accessibility-header'>Toolbar</h2>

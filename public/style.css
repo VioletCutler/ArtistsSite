@@ -149,7 +149,7 @@ link {
   padding:2em;
 }
 
-#toolbar-button{
+#toolbar-button, #toolbar-container{
   position:fixed;
   left: 0;
   bottom: 30vh;
@@ -163,7 +163,7 @@ link {
 footer {
   position: fixed;
   left: 0;
-  bottom: 12px;
+  bottom: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
   border-top:1px solid white;
@@ -184,6 +184,8 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid white;
+
 }
 
 nav {
@@ -231,10 +233,8 @@ iframe {
 
 section {
   max-width: 90%vw;
-  margin-left: 1em;
-  margin-right: 1em;
-  padding-left:1em;
-  padding-right:1em;
+  padding-left:3em;
+  padding-right:3em;
   display: flex;
   flex-direction: column;
 }
@@ -252,6 +252,7 @@ article {
   align-items: center;
   background: var(--dark-card-background-color);
   border-radius: 3%;
+  padding:2em;
 }
 
 article > p {

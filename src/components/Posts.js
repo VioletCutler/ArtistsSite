@@ -21,12 +21,11 @@ const Posts = () => {
         <div>
           {posts ? (
             posts.map((post) => {
-              return (
-                <article key={`post-${post.id}`}>
-                  <h3>{post.id}</h3>
-                  <h3>{post.title}</h3>
-                </article>
-              );
+                  {return post.active ? <article key={`post-${post.id}`}>
+                <h3>{post.id}{post.title}</h3>
+                <p>{post.content}</p>
+              </article> : null}
+              ;
             })
           ) : (
             <h3>No Posts To Display</h3>

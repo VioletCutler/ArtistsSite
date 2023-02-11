@@ -92,7 +92,6 @@ picture {
 
 /* Inherit fonts for inputs and buttons */
 input,
-button,
 textarea,
 select {
   font: inherit;
@@ -142,10 +141,23 @@ link {
 
 #toolbar{
   position:fixed;
-  margin-bottom: 0;
   left: 0;
   bottom: 40vh;
   width:30%;
+  background-color: black;
+  border: 3px solid gold;
+  padding:2em;
+}
+
+#toolbar-button{
+  position:fixed;
+  left: 0;
+  bottom: 30vh;
+  width:7%;
+}
+
+#accessibility-header{
+  padding-top:0;
 }
 
 footer {
@@ -194,6 +206,7 @@ nav > * {
 header {
   color: black;
   margin-left: 3em;
+  border-bottom: 3px solid white;
 }
 
 /* nav {
