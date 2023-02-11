@@ -9,16 +9,16 @@
 
 
 
-  /* DARK MODE */
-  --background-color: #000000;
-  --card-background-color: #444444;
-  --navbar: #dedede;
+  /* ========= DARK MODE ==========*/
+  --dark-background-color: #000000;
+  --dark-card-background-color: #444444;
+  --dark-navbar: #7f7f7f;
 
   /* Nav Bar */
-  --active-nav-link-background: rgb(11, 2, 114);
-  --active-nav-link-font: white;
-  --inactive-nav-link-background:black;
-  --inactive-nav-link-font: white;
+  --dark-active-nav-link-background: rgb(11, 2, 114);
+  --dark-active-nav-link-font: white;
+  --dark-inactive-nav-link-background:black;
+  --dark-inactive-nav-link-font: white;
   
 
 
@@ -27,6 +27,11 @@
   /* dark mode */
 
 }
+
+
+
+
+
 
 /* Box sizing rules */
 *,
@@ -70,7 +75,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 1.5rem;
-  background-color: var(--navbar);
+  background-color: var(--dark-navbar);
 }
 
 /* A elements that don't have a class get default styles */
@@ -99,7 +104,7 @@ select {
 }
 
 #routes {
-  background-color: var(--background-color);
+  background-color: var(--dark-background-color);
   height: 100%;
   margin-top:3em;
 }
@@ -143,6 +148,7 @@ footer {
   text-align: center;
   display:grid;
   grid-template-columns: 5fr 1fr;
+  height: 5vh;
 }
 
 #navbar{
@@ -150,7 +156,7 @@ footer {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: var(--navbar);
+  background-color: var(--dark-navbar);
   text-align: center;
   max-height: 3em;
   display: flex;
@@ -170,9 +176,10 @@ nav > * {
   box-sizing: border-box;
   border: solid black;
   padding: .2em;
-  border-radius: 10%;
-  background: black;
-  color: white;
+  border-radius: 20%;
+  background: var(--dark-inactive-nav-link-background);
+  color: var(--dark-inactive-nav-link-font);
+  width: 5em;
 }
 
 header {
@@ -191,15 +198,15 @@ header {
 } */
 
 
-.imageContainer, img, iframe, h3 {
+.imageContainer, img, h3 {
   min-width: 90%;
   min-height: 90%;
 }
 
 iframe {
-  min-height: 40em;
+  width:35em;
+  height:25em;
 }
-
 
 section {
   max-width: 90%vw;
@@ -220,7 +227,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--card-background-color);
+  background: var(--dark-card-background-color);
   border-radius: 3%;
 }
 
@@ -248,7 +255,26 @@ h2 {
 
 
 nav > *[aria-current="page"] {
-  background: var(--active-nav-link-background);
-  color:var(--active-nav-link-font);
+  background: var(--dark-active-nav-link-background);
+  color:var(--dark-active-nav-link-font);
 }
 
+
+@media (width < 1000px){
+
+  html, body{
+    max-width: 100%;
+  }
+  
+   nav {
+    display:none
+   }
+  
+   #navbar {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+  
+  }
