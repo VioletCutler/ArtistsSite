@@ -10,3 +10,5 @@ export { default as Templates } from './Temporary/Templates'
 export { default as VideoPostTemplate} from './Temporary/VideoPostTemplate'
 
 export { fetchPosts as fetchPosts } from '../axios-services/posts'
+
+export { default as Toolbar} from './Toolbar'

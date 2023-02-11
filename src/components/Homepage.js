@@ -20,9 +20,9 @@ const Homepage = () => {
     <div id="homepage">
       <main>
         <section>
-          <div class="video-container">
+          <div className="video-container">
             <iframe
-              loop='true'
+              loop={true}
               src="https://www.youtube.com/embed/iHUanjVprDI?rel=0"
               title="YouTube video player"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

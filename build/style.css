@@ -106,10 +106,13 @@ select {
 #routes {
   background-color: var(--dark-background-color);
   height: 100%;
-  margin-top:3em;
+  padding-top: 1.5em;
 }
 
-
+.wrapper {
+  display:grid;
+  grid-template-rows: 0.01fr 5fr 1fr;
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -137,10 +140,18 @@ link {
   color: white;
 }
 
+#toolbar{
+  position:fixed;
+  margin-bottom: 0;
+  left: 0;
+  bottom: 40vh;
+  width:30%;
+}
+
 footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 12px;
   width: 100%;
   background-color: rgb(0, 0, 0);
   border-top:1px solid white;
@@ -152,13 +163,11 @@ footer {
 }
 
 #navbar{
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
-  width: 100%;
   background-color: var(--dark-navbar);
   text-align: center;
-  max-height: 3em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -212,6 +221,8 @@ section {
   max-width: 90%vw;
   margin-left: 1em;
   margin-right: 1em;
+  padding-left:1em;
+  padding-right:1em;
   display: flex;
   flex-direction: column;
 }

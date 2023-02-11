@@ -92,7 +92,6 @@ picture {
 
 /* Inherit fonts for inputs and buttons */
 input,
-button,
 textarea,
 select {
   font: inherit;
@@ -140,10 +139,31 @@ link {
   color: white;
 }
 
+#toolbar{
+  position:fixed;
+  left: 0;
+  bottom: 40vh;
+  width:30%;
+  background-color: black;
+  border: 3px solid gold;
+  padding:2em;
+}
+
+#toolbar-button{
+  position:fixed;
+  left: 0;
+  bottom: 30vh;
+  width:7%;
+}
+
+#accessibility-header{
+  padding-top:0;
+}
+
 footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 12px;
   width: 100%;
   background-color: rgb(0, 0, 0);
   border-top:1px solid white;
@@ -213,6 +233,8 @@ section {
   max-width: 90%vw;
   margin-left: 1em;
   margin-right: 1em;
+  padding-left:1em;
+  padding-right:1em;
   display: flex;
   flex-direction: column;
 }

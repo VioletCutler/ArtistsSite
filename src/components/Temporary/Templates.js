@@ -17,8 +17,8 @@ Templates is the way to go:
 const Templates = () => {
   return (
     <div>
-      <h2>This will be my template for different blog posts</h2>
       <section>
+      <h1>This will be my template for different blog posts</h1>
         {posts ? (
           posts.map((post) => {
             {

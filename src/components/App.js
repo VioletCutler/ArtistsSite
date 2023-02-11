@@ -9,12 +9,13 @@ import {
   Videos,
   PhillySkyline,
   Footer,
-  Templates
+  Templates, Toolbar
 } from "./Index";
 import { getAPIHealth } from "../axios-services";
 
 const App = () => {
   const [APIHealth, setAPIHealth] = useState('');
+  const [toolbarVisibility, setToolbarVisibility] = useState(false)
 
   useEffect(() => {
     // follow this pattern inside your useEffect calls:
@@ -47,7 +48,10 @@ const App = () => {
           <Route path="/templates" element={<Templates />} />
         </Routes>
       </div>
-      <Footer/>
+      <Toolbar setToolbarVisibility={setToolbarVisibility}toolbarVisibility={toolbarVisibility}/>
+   
+      <Footer toolbarVisibility={toolbarVisibility}
+      setToolbarVisibility={setToolbarVisibility}/>
     </div>
   );
 };
